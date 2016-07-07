@@ -1,7 +1,6 @@
 package xyz.kowalski.swdemo.resources;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -29,7 +28,7 @@ public class DemoResource {
         return "You are authed!";
     }
 
-    @POST
+    @GET
     @Path("login")
     public String fakeLogin() {
         final Subject currentSubject = SecurityUtils.getSubject();
